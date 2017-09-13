@@ -127,8 +127,9 @@ public class ImagePickActivity extends AppCompatActivity {
             for (Map.Entry<String, List<String>> entry : mGroupMap.entrySet()) {
                 String key = entry.getKey();
                 List<String> value = entry.getValue();
+                if (value == null || value.size()==0) continue;
                 ImageBean bean = new ImageBean();
-                bean.setPath(value.get(value.size()-1));
+                bean.setPath(value.get(0));
                 bean.setPercentName(key);
                 bean.setNum(value.size());
                 list.add(bean);
@@ -136,8 +137,6 @@ public class ImagePickActivity extends AppCompatActivity {
             Collections.sort(list);
             ImageDirAdapter adapter = new ImageDirAdapter(ImagePickActivity.this, list, mGroupMap);
             recyclerView.setAdapter(adapter);
-
-
         }
     }
 
