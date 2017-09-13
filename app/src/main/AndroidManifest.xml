@@ -19,13 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".util.ImagePickActivity"
+        <activity android:name="com.example.dahai.photopicklib.activity.ImagePickActivity"
             android:theme="@style/NoTitleThem"/>
-        <activity android:name=".util.ImageShowActivity"
+        <activity android:name="com.example.dahai.photopicklib.activity.ImageShowActivity"
             android:theme="@style/NoTitleThem"/>
-        <activity android:name=".util.PreviewImageActivity"
-            android:theme="@style/NoTitleThem"/>
-        <activity android:name=".util.PreviewImageActivity2"
+        <activity android:name="com.example.dahai.photopicklib.activity.PreviewImageActivity"
             android:theme="@style/NoTitleThem"/>
     </application>
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/mToolbar"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:background="#64b4ff"
+        android:layout_height="56dp">
+
+        <TextView
+            android:id="@+id/mToolbarNav"
+            android:textColor="#ffffff"
+            android:text="@string/photo"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_chevron_left_black_24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/mToolbarTitle"
+            android:layout_width="wrap_content"
+            android:text="@string/selectPhoto"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:maxLength="20"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/mToolbarCancel"
+            android:text="@string/cancel"
+            android:textColor="#ffffff"
+            android:layout_gravity="end|center_vertical"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:background="#f4f4f4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/mBottomLine"
+        android:layout_width="match_parent"
+        android:background="#ccc"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/mBottom"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/mPreView"
+            android:text="@string/preview"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/preViewColor_no"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/mSure"
+            android:text="@string/sure"
+            android:textColor="@color/preViewColor_no"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/sure_select_no"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

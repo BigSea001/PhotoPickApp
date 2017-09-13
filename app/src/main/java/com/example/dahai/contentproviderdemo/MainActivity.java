@@ -10,9 +10,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,16 +19,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.dahai.contentproviderdemo.util.ImagePickActivity;
-import com.example.dahai.contentproviderdemo.util.ImageSelectUtil;
-import com.example.dahai.contentproviderdemo.util.SelectBean;
+import com.example.dahai.photopicklib.activity.ImagePickActivity;
+import com.example.dahai.photopicklib.bean.SelectBean;
+import com.example.dahai.photopicklib.util.ImageSelectUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String TAG="HHH";
     private List<SelectBean> list;
     private MyAdapter adapter;
 
@@ -54,14 +51,6 @@ public class MainActivity extends AppCompatActivity {
             list.addAll(selectImage);
             adapter.notifyDataSetChanged();
         }
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-
-        int selectNum = ImageSelectUtil.getInstance().getSelectNum();
-        Log.e(TAG, "onRestart: " + selectNum );
     }
 
     public void open(View view) {
